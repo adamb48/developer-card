@@ -10,18 +10,7 @@ factButton.addEventListener("click", function () {
 });
 
 let count = 0;
-let multiplier = 1;
 counter.addEventListener("click", function () {
-  count+=1*multiplier;
+  count++;
   clickCount.textContent = `Liczba kliknięć: ${count}`;
-});
-
-buyButton.addEventListener("click", function () {
-    if (count >= 10*multiplier) {
-        count -= 10*multiplier;
-        multiplier++;
-        clickCount.textContent = `Liczba kliknięć: ${count*multiplier}`;
-        document.querySelector("#multiplier-count").textContent = `mnożnik: x${multiplier}`;
-        document.querySelector("#cost").textContent = `koszt następnego mnożnika: ${10*multiplier}`;
-    }
 });
